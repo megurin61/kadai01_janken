@@ -41,10 +41,20 @@ const randomnumber = Math.ceil( Math.random()*3 );
 // ランダムナンバーが１だったら、チョキ
 // ランダムナンバーが２だったら、グー
 // ランダムナンバーが３だったら、パー
-if(randomnumber==1){
-    view = '1';
 
+// 上記の作業を行うために、更にチョキ、グー、パーに変数を与える
+
+if(randomnumber==1){
+    const computerhand="チョキ"
+
+}else if(randomnumber==2){
+    const computerhand="グー"
+
+}else if(randomnumber==3){
+    const computerhand="パー"
 }
+// コンピューターに↑が認識されているかを確認するためコンソールログを↓に入れ確認する
+console.log(computerhand);
 
 
 
