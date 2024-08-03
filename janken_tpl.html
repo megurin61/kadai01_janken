@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+  <!-- let janken = {'グー','チョキ','パー'} -->
+
+</head>
+
+<body>
+
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+    <div id="judgment">あなたの勝ち</div>
+    
+    <script>
+      let computerhand;
+
+      $("#gu_btn").on("click", function () {
+        const randomnumber = Math.ceil(Math.random() * 3);
+
+        if (randomnumber == 1) {
+          computerhand = "チョキ"
+        } else if (randomnumber == 2) {
+          computerhand = "グー"
+        } else if (randomnumber == 3) {
+          computerhand = "パー"
+        }
+        console.log(computerhand);
+        let userhand = "グー"
+        let result;
+        console.log("ユーザーの手: " + userhand);
+        // 結果判定 let result; 
+
+        // 引き分けの場合
+        if (userhand == computerhand) { result = "引き分け"; }
+
+        // ユーザーが勝つ場合
+        else if (userhand == "グー" && computerhand == "チョキ") {
+          result = "あなたの勝ち";
+        }
+        // ユーザーが負ける場合 
+        else if (userhand == "グー" && computerhand == "パー") {
+          result = "あなたの負け";
+        }
+
+              $("#pc_hands").html(computerhand)
+              $("#judgment").html(result)
+      });
+
+      
+
+
+      $("#cho_btn").on("click", function () {
+        const randomnumber = Math.ceil(Math.random() * 3);
+        if (randomnumber == 1) {
+          computerhand = "チョキ"
+        } else if (randomnumber == 2) {
+          computerhand = "グー"
+        } else if (randomnumber == 3) {
+          computerhand = "パー"
+        }
+        console.log(computerhand);
+        let userhand = "チョキ"
+        let result;
+        console.log("ユーザーの手: " + userhand);
+        // 結果判定 let result; 
+
+        // 引き分けの場合
+        if (userhand == computerhand) { result = "引き分け"; }
+
+        // ユーザーが勝つ場合
+        else if (userhand == "チョキ" && computerhand == "パー") {
+          result = "あなたの勝ち";
+        }
+        // ユーザーが負ける場合 
+        else if (userhand == "チョキ" && computerhand == "グー") {
+          result = "あなたの負け";
+        }
+
+              $("#pc_hands").html(computerhand)
+              $("#judgment").html(result)
+      });
+
+
+
+      $("#par_btn").on("click", function () {
+        const randomnumber = Math.ceil(Math.random() * 3);
+        if (randomnumber == 1) {
+          computerhand = "チョキ"
+        } else if (randomnumber == 2) {
+          computerhand = "グー"
+        } else if (randomnumber == 3) {
+          computerhand = "パー"
+        }
+        console.log(computerhand);
+        let userhand = "パー"
+        let result;
+        console.log("ユーザーの手: " + userhand);
+        // 結果判定 let result; 
+        // 引き分けの場合
+        if (userhand == computerhand) { result = "引き分け"; }
+
+        // ユーザーが勝つ場合
+        else if (userhand == "パー" && computerhand == "グー") {
+          result = "あなたの勝ち";
+        }
+        // ユーザーが負ける場合 
+        else if (userhand == "パー" && computerhand == "チョキ") {
+          result = "あなたの負け";
+        }
+
+              $("#pc_hands").html(computerhand)
+              $("#judgment").html(result)
+      });
+      
+
+
+
+      // 乱数作り コンソールログでコンピューターが出す手を指定する！検証画面にしてコンソールログから更新ボタンで確認できる
+      // 変数はとにかく分かりやすく書く、また繋げた名前にするスペースなどは利用不可
+            // console.log(r);
+      // ランダムナンバーとグー、チョキ、パーを紐づける
+      // ランダムナンバーが１だったら、チョキ
+      // ランダムナンバーが２だったら、グー
+      // ランダムナンバーが３だったら、パー
+      // 上記の作業を行うために、更にチョキ、グー、パーに変数を与える
+
+      // コンピューターに↑が認識されているかを確認するためコンソールログを↓に入れ確認する
+      //if(computerhand==userhand){
+      //  result="引き分け"
+      //}else if(computerhand=){
+      //result="私の勝ち"
+      //}
+
+      // ユーザーの手を設定 let userhand = "グー"; 
+      // ユーザーの手をグーに設定（必要に応じて変更可）
+      //  もしもAに1が入っていたら、チョキとする
+      // もしもAに2が入っていたら、グーとする
+
+
+
+      
+
+
+    </script>
+
+
+  </main>
+
+  <footer></footer>
+  <script>
+
+
+
+
+
+  </script>
+</body>
+
+</html>
